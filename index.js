@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(morgan("combined"));
 app.use(express.urlencoded({ extended: false }));
 
-// app.use(require("./routes"));
+app.use(require("./routes"));
 
 db.authenticate()
   .then(() => console.log("DB CONNECTED"))
